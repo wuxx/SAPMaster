@@ -1,0 +1,12 @@
+{
+	"type":"hex",
+	"name":"GPIO_TEST.hex",
+	"class":"stm32f1x",
+	"model":"stm32f103c8t6",
+	"interface":"swd",
+	"mode":"auto",
+	"lifetime":"10000",
+	"flash_addr":"0x08000000",
+	"rolling_code_addr":"-1",
+	"rolling_code_value":"-1"
+}
