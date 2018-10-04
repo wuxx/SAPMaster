@@ -10,6 +10,7 @@
     * [蜂鸣器状态](#蜂鸣器状态)
     * [LED状态](#led状态)
 * [配置文件生成器](#配置文件生成器)
+* [接口说明](#接口说明)
 * [FAQ](#faq)
 
 # 产品介绍
@@ -33,7 +34,7 @@ SAPMaster V1 （Stand Alone Programmer Master V1）是我司推出的第一代�
 - 镜像在烧录器内使用AES加密算法加密保存在烧录器内部非易失存储中，严格保证镜像的安全性。
 - 使用蜂鸣器和RGB LED三色灯双重提示系统状态，简单易用。
 - 支持固件升级，只需将新固件拷贝至SD卡中，将SD卡插入到烧录器中，重启烧录器，等待片刻，即可完成固件升级，固件发布在本仓库的firmware目录中，您可随时查询最新固件以及更多的功能。
-- 硬件上已经引出SWD、JTAG、串口、ICSP接口，已经为将来适配更多的目标芯片做好准备，将来只需升级固件，即可支持更多芯片的烧录，如stm8、8051、avr、imx, k40/k60, lpcxxx, dsp, at91xx, nrf51, dsp, mips, fpga/cpld等，更多目标芯片正在适配中，您可将需求告知我们，我们的工程师优先为您的平台提供技术支持。
+- 硬件上已经引出SWD、JTAG、串口、ICSP接口，已经为将来适配更多的目标芯片做好准备，将来只需升级固件，即可支持更多芯片的烧录，如stm8、8051、avr、imx, k40/k60, lpcxxx, at91xx, nrf51, dsp, mips, fpga/cpld等，更多目标芯片正在适配中，您可将需求告知我们，我们的工程师优先为您的平台提供技术支持。
 
 # 使用场景
 ## 系统启动
@@ -93,5 +94,8 @@ LED   | 整体说明| 场景说明
     "rolling_code_value":"-1"  /* 滚码的初始值，若不需滚码功能，则此两项均填-1 */
 }
 ```
+# 接口说明
+![interface](https://github.com/wuxx/SAPMaster/blob/master/doc/interface.png)
+
 # FAQ
 有任何问题或者建议，请在本仓库的[Issues](https://github.com/wuxx/SAPMaster/issues)页面中提出，我们的工程师会持续跟进解决。
