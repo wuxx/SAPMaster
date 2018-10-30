@@ -52,7 +52,13 @@ function gen_json()
 	var mode_text;
 	index = mode_elem.selectedIndex;
 	mode_text = mode_elem.options[index].text; 
-
+	
+	/* read_protect */
+	var read_protect_elem = document.getElementsByName('select_read_protect')[0];
+	var read_protect_text;
+	index = read_protect_elem.selectedIndex;
+	read_protect_text = read_protect_elem.options[index].text; 
+	
 	/* lifetime */
 	var lifetime = document.getElementsByName('lifetime')[0];
 
@@ -64,7 +70,8 @@ function gen_json()
 
 	/* rolling_code_value */
 	var rolling_code_value = document.getElementsByName('rolling_code_value')[0];
-	
+
+
 	//var blob = new Blob([filename1[0].value], {type: "text/plain;charset=utf-8"});
 
 	json = "{\n";
@@ -76,6 +83,7 @@ function gen_json()
 	json = json + "\t\"mode\":"               + "\"" + mode_text        + "\",\n";
 	json = json + "\t\"lifetime\":"           + "\"" + lifetime.value   + "\",\n";
 	json = json + "\t\"flash_addr\":"         + "\"" + flash_addr.value + "\",\n";
+	json = json + "\t\"read_protect\":"       + "\"" + read_protect_text + "\",\n";
 	json = json + "\t\"rolling_code_addr\":"  + "\"" + rolling_code_addr.value  + "\",\n";	
 	json = json + "\t\"rolling_code_value\":" + "\"" + rolling_code_value.value + "\"\n";	
 	json = json + "}";
@@ -130,6 +138,14 @@ model: <input type="text" name="model" value="stm32f103c8t6">
   <option value="hex">swd</option>
   <option value="bin">jtag</option>
   <option value="bin">icsp</option>
+</select>
+<p>
+
+<form name="form_read_protect">
+<label>read_protect: </label>
+<select name="select_read_protect">
+  <option value="0">0</option>
+  <option value="1">1</option>
 </select>
 <p>
 
